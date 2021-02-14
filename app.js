@@ -71,8 +71,8 @@ const createSlider = () => {
         // hide image aria
         imagesArea.style.display = 'none';
         const duration = document.getElementById('duration').value || 1000;
-        if (duration <= 0) {
-            alert('Duration value cannot be negative')
+        if (duration < 400) {
+            alert('Duration value cannot be negative and not below 400 millisecond,Please try to give some valid duration time like 500/1000/2000/3000 millisecond or as long as u want');
             imagesArea.style.display = 'block';
             sliderContainer.style.display = 'none';
 
