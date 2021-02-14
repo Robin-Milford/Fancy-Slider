@@ -34,8 +34,7 @@ const getImages = (query) => {
         .then(function(data) {
             const imgData = data.hits;
             showImages(imgData);
-        })
-        .catch(err => console.log(err))
+        }).catch(error => console.log(error))
 }
 
 let slideIndex = 0;
@@ -72,7 +71,7 @@ const createSlider = () => {
         imagesArea.style.display = 'none';
         const duration = document.getElementById('duration').value || 1000;
         if (duration < 400) {
-            alert('Duration value cannot be negative and not below 400 millisecond,Please try to give some valid duration time like 500/1000/2000/3000 millisecond or as long as u want');
+            alert('Duration time cannot be negative and not below 400 millisecond,Please try to give some valid duration time like 500/1000/2000/3000 millisecond or as long as u want');
             imagesArea.style.display = 'block';
             sliderContainer.style.display = 'none';
 
